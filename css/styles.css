@@ -52,6 +52,11 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
 /* ====================HEADER=================== */
 
 .header {
@@ -140,6 +145,16 @@ img {
 .hero {
   background-color: #2e2f42;
   padding: 188px 0;
+  background-color: #2a2a2a;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/fon-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-container {
