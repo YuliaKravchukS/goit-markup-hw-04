@@ -58,6 +58,8 @@ img {
 .header {
   border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
   background: var(--WHITE, #fff);
+  box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container-header {
@@ -99,6 +101,7 @@ img {
 ..header-menu-item {
 }
 .header-menu-link {
+  position: relative;
   color: #2e2f42;
   padding: 24px 0;
   display: inline-block;
@@ -112,14 +115,16 @@ img {
   color: #404bbf;
 }
 
-/* .header-menu-link:hover::after,
-.header-menu-link:focus::after {
+.header-menu-link::after {
   content: "";
-  width: 66px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
   height: 4px;
   border-radius: 2px;
-  color: var(--OCEAN, #404bbf);
-} */
+  color: #404bbf;
+  width: 100%;
+}
 .address {
   margin-left: auto;
   font-style: normal;
@@ -166,10 +171,11 @@ img {
     url(/images/fon-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1440px;
+  background-size: cover;
 }
 
 .hero-container {
+  max-width: 1440px;
 }
 .hero-tittle {
   color: #fff;
@@ -243,11 +249,13 @@ img {
 .feature-icon {
 }
 .feature-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 112px;
   border-radius: 4px;
-  border: 1px solid var(--LIGHT-SLATE, #8e8f99);
-  background-color: var(--CLOUD, #f4f4fd);
-  padding: 24px 100px;
+  border: 1px solid #8e8f99;
+  background-color: #f4f4fd;
   margin-bottom: 8px;
 }
 
@@ -400,7 +408,7 @@ img {
 
 .portfolio-list-item:hover .overlay {
   background-color: var(--IRIS, #4d5ae5);
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 .portfolio-subtittle {
   color: #2e2f42;
@@ -434,7 +442,11 @@ img {
 
 .footer-container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
+}
+
+.footer-block-right {
+  margin-right: 120px;
 }
 .footer-link {
   color: #4d5ae5;
@@ -444,11 +456,10 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-.footer-link {
   display: inline-block;
   margin-bottom: 16px;
 }
+
 .footer-logo {
   color: #f4f4fd;
 }
