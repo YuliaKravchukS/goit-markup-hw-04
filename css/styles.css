@@ -168,7 +168,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/fon-hero.jpg);
+    url(../images/fon-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
